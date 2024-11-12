@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>정합 파일 변환</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="label-box" id="fileNameLabel">파일 이름</div>
+        <div class="label-box">정합 정확도 : 0.00%</div>
+        <div><button class="save-button" onclick="saveFile()">저장</button></div>
+      </div>
+
+      <div class="body">
+        <div
+          class="file-section"
+          id="beforeFileSection"
+          onclick="uploadFile('before')"
+          ondrop="handleDrop(event)"
+          ondragover="handleDragOver(event)"
+          ondragleave="handleDragLeave(event)"
+        >
+          <span id="beforeLabel">정합 전 파일</span>
+          <div id="button-container"></div>
+        </div>
+
+        <div class="arrow-button" onclick="convertFile()">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Red_Arrow_Right.svg/1200px-Red_Arrow_Right.svg.png"
+            alt="arrow"
+          />
+        </div>
+
+        <div class="file-section">
+          <span id="afterLabel">정합 후 파일</span>
+          <img id="afterImage" src="" alt="" style="display: none" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
