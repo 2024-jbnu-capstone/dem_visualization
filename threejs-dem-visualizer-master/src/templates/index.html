@@ -3,40 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>정합 파일 변환</title>
+    <title>홈 페이지</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- 헤더 섹션 -->
+    <div class="header">홈 페이지</div>
+
+    <!-- 컨테이너 섹션 (페이지 설명 및 버튼) -->
     <div class="container">
-      <div class="header">
-        <div class="label-box" id="fileNameLabel">파일 이름</div>
-        <div class="label-box">정합 정확도 : 0.00%</div>
-        <div><button class="save-button" onclick="saveFile()">저장</button></div>
-      </div>
+      <!-- 페이지 설명 -->
+      <div class="description">이 공간에는 팀 소개와 웹 페이지 기능들에 대해 설명할 것입니다.</div>
 
-      <div class="body">
-        <div
-          class="file-section"
-          id="beforeFileSection"
-          onclick="uploadFile('before')"
-          ondrop="handleDrop(event)"
-          ondragover="handleDragOver(event)"
-          ondragleave="handleDragLeave(event)"
-        >
-          <span id="beforeLabel">정합 전 파일</span>
-          <div id="button-container"></div>
-        </div>
-
-        <div class="arrow-button" onclick="convertFile()">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Red_Arrow_Right.svg/1200px-Red_Arrow_Right.svg.png"
-            alt="arrow"
-          />
-        </div>
-
-        <div class="file-section">
-          <span id="afterLabel">정합 후 파일</span>
-          <img id="afterImage" src="" alt="" style="display: none" />
-        </div>
+      <!-- 버튼 섹션 -->
+      <div class="button-container">
+        <button class="button" onclick="showVisualization()">시각화 버튼</button>
+        <button class="button" onclick="showIntegration()">정합 버튼</button>
       </div>
     </div>
   </body>
