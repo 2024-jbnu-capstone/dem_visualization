@@ -1,0 +1,158 @@
+body
+    font-family: Arial, sans-serif
+    background-color: #1e1e1e
+    color: #ffffff
+    margin: 0
+    padding: 0
+    display: flex
+    flex-direction: column
+    height: 100vh
+
+header
+  display: flex
+  align-items: center
+  justify-content: space-between
+  background-color: #333
+  padding: 10px 20px
+
+  .logo
+    color: white
+    text-decoration: none
+    font-size: 1.5em
+    font-weight: bold
+
+  .report-button
+    margin-left: auto // 오른쪽 끝으로 이동
+    padding: 8px 16px
+    background-color: #FF5733
+    color: white
+    border: none
+    border-radius: 5px
+    cursor: pointer
+    font-weight: bold
+    transition: background-color 0.3s ease
+
+    &:hover
+      background-color: #E74C3C
+
+
+
+
+
+.container
+    display: flex
+    flex: 1
+
+.sidebar
+    width: 200px
+    background-color: #2b2b2b
+    padding: 20px
+    height: 100%
+    box-sizing: border-box
+    display: flex
+    flex-direction: column
+
+.button-group
+    display: flex
+    gap: 5px
+    margin-bottom: 20px
+
+.button-group button
+    flex: 1
+    padding: 5px
+    background-color: #444
+    color: #ffffff
+    border: none
+    border-radius: 3px
+    cursor: pointer
+    transition: background-color 0.3s
+
+.button-group button:hover
+    background-color: #555
+
+.delete-button 
+    background-color: #f44336
+    color: white
+    border: none
+    padding: 5px 10px
+    cursor: pointer
+    border-radius: 5px
+
+
+
+.sidebar h2
+    font-size: 1.2em
+    margin-top: 0
+
+.file-list
+    list-style: none
+    padding: 0
+    margin: 0
+
+.file-list li
+    margin: 10px 0
+    color: #ffffff
+
+.file-list li a
+    color: #3399ff
+    text-decoration: none
+
+.main-content
+    flex: 1
+    padding: 20px
+    overflow-y: auto
+    display: flex
+    flex-direction: column
+
+h1
+    font-size: 2em
+    margin-bottom: 10px
+
+.links
+    margin-bottom: 20px
+
+.links a
+    color: #3399ff
+    text-decoration: none
+    display: block
+    margin-bottom: 5px
+
+.links a:hover
+    text-decoration: underline
+
+.description
+    font-size: 1em
+    margin-bottom: 20px
+
+.video-section
+    display: flex
+    align-items: center
+    gap: 10px
+
+.video-section img
+    width: 300px
+    height: auto
+    border-radius: 5px
+
+.content
+    font-size: 1em
+    background-color: #333
+    padding: 20px
+    border-radius: 5px
+    margin-bottom: 20px
+
+.visualization-box
+    flex: 1
+    background-color: #444
+    border: 2px dashed #666
+    border-radius: 5px
+    display: flex
+    align-items: center
+    justify-content: center
+    color: #bbb
+    font-size: 1.2em
+    margin-top: 20px
+    padding: 20px
+
+#fileInput
+    display: none

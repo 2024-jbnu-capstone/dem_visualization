@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>정합</title>
+    <script src="https://cdn.jsdelivr.net/npm/geotiff"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/a17b44d86a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.0/css/alertify.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.0/alertify.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.0/css/alertify.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.0/alertify.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="/" class="logo"> <i class="fa-solid fa-globe"></i> 정합 페이지 </a>
+      <div class="button-container">
+        <!-- 파일 업로드 버튼 -->
+        <button class="button_top" id="uploadButton">파일 업로드</button>
+        <!-- 정합 버튼 -->
+        <button class="button_top" id="alignButton">정합</button>
+        <!-- 저장 버튼 -->
+        <button class="save_button" id="saveButton">저장</button>
+        <!-- 문제 신고 버튼 -->
+        <button class="report-button" id="reportButton">문제 신고</button>
+      </div>
+    </header>
+    <div class="container" id="visualizationContainer">
+      <div class="centered-text" id="text">정합을 위해 파일을 업로드해주세요.</div>
+    </div>
+  </body>
+</html>

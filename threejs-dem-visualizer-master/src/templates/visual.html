@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DEM visualization</title>
+    <script src="https://cdn.jsdelivr.net/npm/geotiff"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/a17b44d86a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.0/css/alertify.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.0/alertify.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <!-- 로고 -->
+      <a href="/" class="logo"> <i class="fa-solid fa-globe"></i> 시각화 페이지 </a>
+      <!-- 문제 신고 버튼 -->
+      <button class="report-button" id="reportButton">문제 신고</button>
+    </header>
+
+    <!-- 컨테이너 섹션 (사이드바와 메인 콘텐츠) -->
+    <div class="container">
+      <div class="sidebar">
+        <div class="button-group">
+          <button onclick="refreshPage()">새로고침</button>
+          <button onclick="openFileDialog()">업로드</button>
+          <input type="file" id="fileInput" onchange="handleFileUpload(event)" />
+        </div>
+        <h2>파일</h2>
+        <ul id="fileList" class="file-list">
+          <!-- 업로드된 파일이 여기에 추가됩니다 -->
+          <li>현재 업로드된 파일이 없습니다.</li>
+        </ul>
+      </div>
+
+      <div class="main-content">
+        <!-- 시각화 영역 -->
+        <div class="container" id="canvas-container"></div>
+      </div>
+    </div>
+  </body>
+</html>

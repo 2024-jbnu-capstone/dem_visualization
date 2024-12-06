@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문제 신고</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/a17b44d86a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  </head>
+  <body>
+    <!-- 헤더 섹션 -->
+    <header class="header">
+      <a href="/" class="logo"><i class="fa-solid fa-globe"></i> 문제 신고</a>
+    </header>
+
+    <!-- 글 작성 폼 -->
+    <div class="form-container">
+      <h2>문제 신고</h2>
+      <form id="contact-form">
+        <!-- 이메일 입력 -->
+        <div class="email-row">
+          <label for="email-prefix">이메일:</label>
+          <input type="text" id="email-prefix" placeholder="이메일 아이디" required />
+          @
+          <select id="email-domain">
+            <option value="@gmail.com">gmail.com</option>
+            <option value="@naver.com">naver.com</option>
+            <option value="custom">직접 입력</option>
+          </select>
+          <input type="text" id="custom-domain" class="hidden" placeholder="직접 입력" />
+        </div>
+        <!-- 제목 입력 -->
+        <div>
+          <label for="title">제목:</label>
+          <input type="text" id="title" placeholder="문제의 제목을 입력하세요" required />
+        </div>
+        <!-- 내용 입력 -->
+        <div>
+          <label for="content">발생한 문제</label>
+          <textarea id="content" placeholder="발생한 문제에 대해 적어주세요." required></textarea>
+        </div>
+        <!-- 제출 버튼 -->
+        <div class="button-container">
+          <button type="submit">전송</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

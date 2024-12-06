@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INSIGHT</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/a17b44d86a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.0/css/alertify.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.0/alertify.js"></script>
+  </head>
+  <body>
+    <!-- 헤더 섹션 -->
+    <header class="header">
+      <!-- 로고 -->
+      <a href="/" class="logo"> <i class="fa-solid fa-globe"></i> INSIGHT </a>
+      <!-- 문제 신고 버튼 -->
+      <button class="report-button" id="reportButton">문제 신고</button>
+    </header>
+
+    <!-- 컨테이너 섹션 (페이지 설명 및 버튼) -->
+    <div class="container">
+      <!-- 페이지 설명 -->
+      <div class="description">INSIGHT는 DEM 데이터 시각화와 정합 기능을 제공합니다.</div>
+
+      <!-- 버튼 섹션 -->
+      <div class="button-container">
+        <button class="button" onclick="showVisualization()">시각화 버튼</button>
+        <button class="button" onclick="showIntegration()">정합 버튼</button>
+      </div>
+    </div>
+    <footer class="footer">&copy; 2024. Team Insight. All Rights Reserved.</footer>
+  </body>
+</html>
