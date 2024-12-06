@@ -5,6 +5,7 @@ import {
   AmbientLight,
   WebGLRenderer,
   PlaneGeometry,
+<<<<<<< HEAD
   // GridHelper,
   // AxesHelper,
   MeshLambertMaterial,
@@ -26,6 +27,21 @@ class Application {
       opts.canvas ||
       document.getElementById('canvas-container') ||
       document.getElementById('visualizationContainer');
+=======
+  GridHelper,
+  AxesHelper,
+  MeshLambertMaterial,
+  DoubleSide,
+  Mesh,
+  Float32BufferAttribute,
+} from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import * as Detector from './vendor/Detector';
+
+class Application {
+  constructor(opts = {}) {
+    this.canvas = opts.canvas || document.getElementById('canvas-container');
+>>>>>>> 5be8de7378fee68e4201df46117893c8351a1fe1
     this.width = this.canvas.clientWidth;
     this.height = this.canvas.clientHeight;
 
@@ -56,7 +72,11 @@ class Application {
     this.setupControls();
     this.setupLight();
     this.setupTerrainModel();
+<<<<<<< HEAD
     // this.setupHelpers();
+=======
+    this.setupHelpers();
+>>>>>>> 5be8de7378fee68e4201df46117893c8351a1fe1
 
     window.addEventListener('resize', () => {
       const w = this.canvas.clientWidth;
@@ -81,9 +101,15 @@ class Application {
   }
 
   setupRenderer() {
+<<<<<<< HEAD
     this.renderer = new WebGLRenderer({ antialias: false });
     this.renderer.setClearColor(0xd3d3d3);
     this.renderer.setPixelRatio(window.devicePixelRatio);
+=======
+    this.renderer = new WebGLRenderer({ antialias: true });
+    this.renderer.setClearColor(0xd3d3d3);
+    this.renderer.setPixelRatio(window.devicePixelRatio || 1);
+>>>>>>> 5be8de7378fee68e4201df46117893c8351a1fe1
     this.renderer.setSize(this.width, this.height);
     this.renderer.shadowMap.enabled = true;
     this.container.appendChild(this.renderer.domElement);
@@ -95,7 +121,11 @@ class Application {
     const near = 0.1;
     const far = 10000;
     this.camera = new PerspectiveCamera(fov, aspect, near, far);
+<<<<<<< HEAD
     this.camera.position.set(300, 300, 300);
+=======
+    this.camera.position.set(1000, 1000, 1000);
+>>>>>>> 5be8de7378fee68e4201df46117893c8351a1fe1
     this.camera.lookAt(this.scene.position);
   }
 
@@ -151,7 +181,11 @@ class Application {
         const arr1 = new Array(geometry.attributes.position.count);
         const arr = arr1.fill(1);
         arr.forEach((a, index) => {
+<<<<<<< HEAD
           geometry.attributes.position.setZ(index, (data[index] / 50) * -1);
+=======
+          geometry.attributes.position.setZ(index, (data[index] / 10) * -1);
+>>>>>>> 5be8de7378fee68e4201df46117893c8351a1fe1
         });
         console.timeEnd('parseGeom');
 
@@ -171,11 +205,15 @@ class Application {
           if (z > maxZ) maxZ = z;
         }
 
+<<<<<<< HEAD
         const colorScale = scaleSequential(d3.interpolateMagma); // Magma 컬러맵 설정
+=======
+>>>>>>> 5be8de7378fee68e4201df46117893c8351a1fe1
         const colorArray = new Float32Array(geometry.attributes.position.count * 3);
 
         for (let i = 0; i < geometry.attributes.position.count; i++) {
           const z = geometry.attributes.position.getZ(i);
+<<<<<<< HEAD
           const t = Math.pow((z - minZ) / (maxZ - minZ), 2); // 0~1로 정규화 후 제곱
 
           const colorString = colorScale(t); // d3.interpolateMagma에서 색상 문자열 반환
@@ -184,6 +222,12 @@ class Application {
           colorArray[i * 3] = color.r; // R 값
           colorArray[i * 3 + 1] = color.g; // G 값
           colorArray[i * 3 + 2] = color.b; // B 값
+=======
+          const t = Math.pow((z - minZ) / (maxZ - minZ), 2);
+          colorArray[i * 3] = t;
+          colorArray[i * 3 + 1] = t;
+          colorArray[i * 3 + 2] = t;
+>>>>>>> 5be8de7378fee68e4201df46117893c8351a1fe1
         }
 
         geometry.setAttribute('color', new Float32BufferAttribute(colorArray, 3));
@@ -204,6 +248,10 @@ class Application {
 
     readGeoTif();
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5be8de7378fee68e4201df46117893c8351a1fe1
   // Error message display function
   displayErrorMessage(message) {
     let errorContainer = document.getElementById('error-container');
@@ -220,6 +268,7 @@ class Application {
     errorContainer.innerHTML = `<p>${message}</p>`;
   }
 
+<<<<<<< HEAD
   // setupHelpers() {
   //   const gridHelper = new GridHelper(1000, 40);
   //   this.scene.add(gridHelper);
@@ -227,6 +276,15 @@ class Application {
   //   const axesHelper = new AxesHelper(500);
   //   this.scene.add(axesHelper);
   // }
+=======
+  setupHelpers() {
+    const gridHelper = new GridHelper(1000, 40);
+    this.scene.add(gridHelper);
+    console.log('The X axis is red. The Y axis is green. The Z axis is blue.');
+    const axesHelper = new AxesHelper(500);
+    this.scene.add(axesHelper);
+  }
+>>>>>>> 5be8de7378fee68e4201df46117893c8351a1fe1
 }
 
 export default Application;

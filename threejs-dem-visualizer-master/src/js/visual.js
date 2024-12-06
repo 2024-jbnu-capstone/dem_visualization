@@ -1,12 +1,15 @@
 require('../sass/visual.sass');
 import Application from './visualization.js';
 
+<<<<<<< HEAD
 const reportbutton = document.getElementById('reportButton');
 
 reportbutton.addEventListener('click', function () {
   window.location.href = '/report'; // /report로 이동
 });
 
+=======
+>>>>>>> 5be8de7378fee68e4201df46117893c8351a1fe1
 // 페이지 새로고침 기능
 function refreshPage() {
   location.reload();

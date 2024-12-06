@@ -12,6 +12,7 @@ app.get('/', (req, res) => {
 app.get('/visualization', (req, res) => {
   res.sendFile(path.join(__dirname, 'src', 'templates', 'visual.html'));
 });
+<<<<<<< HEAD
 
 app.get('/jeonghop', (req, res) => {
   res.sendFile(path.join(__dirname, 'src', 'templates', 'jeonghop.html'));
@@ -20,3 +21,5 @@ app.get('/jeonghop', (req, res) => {
 app.get('/report', (req, res) => {
   res.sendFile(path.join(__dirname, 'src', 'templates', 'pro.html'));
 });
+=======
+>>>>>>> 5be8de7378fee68e4201df46117893c8351a1fe1

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD
     <title>정합</title>
     <script src="https://cdn.jsdelivr.net/npm/geotiff"></script>
     <link rel="stylesheet" href="styles.css" />
@@ -36,6 +37,28 @@
     </header>
     <div class="container" id="visualizationContainer">
       <div class="centered-text" id="text">정합을 위해 파일을 업로드해주세요.</div>
+=======
+    <title>정합 페이지</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- 헤더 섹션 -->
+    <div class="header">정합 페이지</div>
+
+    <!-- 컨테이너 섹션 (파일 업로드 박스, 정합 버튼 및 추가 공간) -->
+    <div class="container">
+      <!-- 파일 업로드 박스 -->
+      <div class="box upload-box">
+        파일을 선택하여 업로드하세요
+        <input type="file" id="fileUpload" />
+      </div>
+
+      <!-- 정사각형 버튼 (세로 가운데) -->
+      <button class="align-button" onclick="alignFunction()">정합</button>
+
+      <!-- 두 번째 빈 공간 -->
+      <div class="box">추가 공간</div>
+>>>>>>> 5be8de7378fee68e4201df46117893c8351a1fe1
     </div>
   </body>
 </html>
